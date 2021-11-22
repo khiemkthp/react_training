@@ -1,5 +1,6 @@
 import './App.css';
 import ProductList from './components/Products/ProductList.js';
+import NewProduct from './components/Products/NewProduct.js';
 
 function App() {
   return (
@@ -32,7 +33,8 @@ const element = (
     <h1 className={RedColor}>
       Xin chào, {formatName(user)}!
     </h1>
-  <ProductList products={products}></ProductList>
+    <NewProduct></NewProduct>
+    <ProductList products={products}></ProductList>
   </div>
 );
 
