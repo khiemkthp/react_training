@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import ProductList from './components/Products/ProductList.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h3> {element}</h3>
   );
 }
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+ 
+const user = {
+  firstName: 'Khiem',
+  lastName: 'Ngo'
+};
+
+const RedColor = 'RedColor';
+const PinkColor = 'PinkColor';
+
+const products = [
+  {name: "T-Shirt", category: "Fashion", price: 12},
+  {name: "Red Dress", category: "Fashion", price: 20},
+  {name: "iPhoneX", category: "Smartphone", price: 600},
+  {name: "iPhone 12", category: "Fashion", price: 1200},
+  {name: "Smart Tivi Sony 50 Inch", category: "Smart Tivi", price: 700}
+];
+
+const element = (
+  <div>
+    <h1 className={RedColor}>
+      Xin chào, {formatName(user)}!
+    </h1>
+  <ProductList products={products}></ProductList>
+  </div>
+);
 
 export default App;
