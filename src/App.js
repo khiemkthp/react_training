@@ -28,12 +28,17 @@ const products = [
   {name: "Smart Tivi Sony 50 Inch", category: "Smart Tivi", price: 700}
 ];
 
+const AddProductHandler = (productdata) => {
+  console.log("Process to add product");
+  console.log(productdata);
+};
+
 const element = (
   <div>
     <h1 className={RedColor}>
       Xin chào, {formatName(user)}!
     </h1>
-    <NewProduct></NewProduct>
+    <NewProduct AddProduct={AddProductHandler}></NewProduct>
     <ProductList products={products}></ProductList>
   </div>
 );
